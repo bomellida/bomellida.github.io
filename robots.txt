@@ -1,0 +1,11 @@
+# Allow all bots to crawl everything
+User-agent: *
+Disallow: /flag.webp/
+Disallow: /flag/
+Disallow: /google117834e32b682861.html/
+Disallow: /google117834e32b682861/
+Disallow: /robots.txt/
+Disallow: /robots/
+Allow: /
+Allow: /faq
+Allow: /faq.html
