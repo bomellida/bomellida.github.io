@@ -8,5 +8,6 @@ Disallow: /robots.txt/
 Disallow: /robots/
 Allow: /
 Allow: /faq
-Allow: /faq.html
+Allow: /blizzard
+Allow: /archivepages
 Allow: /sitemap.xml
