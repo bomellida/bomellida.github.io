@@ -6,6 +6,8 @@ Disallow: /google117834e32b682861.html/
 Disallow: /google117834e32b682861/
 Disallow: /robots.txt/
 Disallow: /robots/
+Disallow: /bomellidaarchivedocuments.pdf/
+Disallow: /bomellidaarchivedocuments/
 Allow: /
 Allow: /faq
 Allow: /blizzard
