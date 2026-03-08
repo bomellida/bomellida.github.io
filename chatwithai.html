@@ -1,0 +1,48 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bomellida - AI Chat</title>
+  <link rel="icon" href="flag.webp" type="image/webp">
+  <script src="https://cdn.jsdelivr.net"></script>
+</head>
+<body>
+  <p>Hello! We have implemented a AI chat.</p>
+ <div id="chat-container">
+  <div id="display" style="height: 300px; overflow-y: auto; border: 1px solid #ccc; padding: 10px;">
+    Loading, please wait...
+  </div>
+  <input type="text" id="user-input" placeholder="Ask something..." style="width: 80%;">
+  <button onclick="sendMsg()">Send</button>
+</div>
+<script type="module">
+  import * as webllm from "https://esm.run";
+  const modelId = "TinyLlama-1.1B-Chat-v1.0-q4f16_1-MLC";
+  let engine;
+
+  async function init() {
+    engine = await webllm.CreateMLCEngine(modelId, {
+      initProgressCallback: (report) => {
+        document.getElementById("display").innerText = report.text;
+      }
+    });
+    document.getElementById("display").innerText = "AI Ready! Type below.";
+  }
+
+  window.sendMsg = async () => {
+    const input = document.getElementById("user-input").value;
+    const display = document.getElementById("display");
+    
+    display.innerHTML += `<p><b>You:</b> ${input}</p>`;
+    const chunks = await engine.chat.completions.create({
+      messages: [{ role: "user", content: input }]
+    });
+    
+    const reply = chunks.choices[0].message.content;
+    display.innerHTML += `<p><b>AI:</b> ${reply}</p>`;
+  };
+
+  init();
+</script>
+</body>
+</html>
