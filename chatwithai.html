@@ -28,20 +28,16 @@
     <button id="send-btn" disabled>Send</button>
   </div>
 
-  <script type="module">
-    // Load library from CDN
-    import { pipeline } from 'https://cdn.jsdelivr.net';
+<script type="module">
+  // 1. Import both 'pipeline' and 'env'
+  import { pipeline, env } from 'https://cdn.jsdelivr.net';
 
-    const log = document.getElementById('chat-log');
-    const input = document.getElementById('user-input');
-    const btn = document.getElementById('send-btn');
-    const status = document.getElementById('status');
+  // 2. IMPORTANT: Disable local model checking (fixes the ERR_FAILED)
+  env.allowLocalModels = false;
+  env.useBrowserCache = true; // Speeds up future loads
 
-    // THIS IS THE MEMORY: A simple list of the whole conversation
-    let chatHistory = [];
-
-    // Load the tiny text generator model
-    const generator = await pipeline('text-generation', 'Xenova/SmolLM2-135M-Instruct');
+  // ... rest of your code remains the same ...
+  const generator = await pipeline('text-generation', 'Xenova/SmolLM2-135M-Instruct');
     
     status.innerText = "AI Online. Running locally on your device.";
     input.disabled = false;
@@ -82,3 +78,4 @@
   </script>
 </body>
 </html>
+
