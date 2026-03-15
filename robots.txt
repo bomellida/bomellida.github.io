@@ -1,6 +1,8 @@
 # Allow all bots to crawl specific stuff
 User-agent: *
 Disallow: /flag.webp/
+Disallow: /aichat/
+Disallow: /aichat.html/
 Disallow: /flag/
 Disallow: /google117834e32b682861.html/
 Disallow: /google117834e32b682861/
