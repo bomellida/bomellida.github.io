@@ -7,7 +7,7 @@ Disallow: /google117834e32b682861
 Disallow: /robots.txt
 Disallow: /robots
 Disallow: /bomellidaarchivedocuments
-
+Disallow: /bomellidaflagphone.jpg
 Disallow: /bomellidaarchivedocuments.pdf
 Disallow: /bomellidaarchivedocuments
 Allow: /
