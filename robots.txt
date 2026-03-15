@@ -1,16 +1,18 @@
 # Allow all bots to crawl specific stuff
 User-agent: *
-Disallow: /flag.webp/
-Disallow: /flag/
-Disallow: /google117834e32b682861.html/
-Disallow: /google117834e32b682861/
-Disallow: /robots.txt/
-Disallow: /robots/
-Disallow: /bomellidaarchivedocuments.pdf/
-Disallow: /bomellidaarchivedocuments/
+Disallow: /flag.webp
+Disallow: /flag
+Disallow: /google117834e32b682861.html
+Disallow: /google117834e32b682861
+Disallow: /robots.txt
+Disallow: /robots
+Disallow: /bomellidaarchivedocuments
+
+Disallow: /bomellidaarchivedocuments.pdf
+Disallow: /bomellidaarchivedocuments
 Allow: /
 Allow: /faq
 Allow: /blizzard
-Allow: /aichat/
+Allow: /aichat
 Allow: /archivepages
 Allow: /sitemap.xml
