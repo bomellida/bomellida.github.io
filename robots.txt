@@ -9,6 +9,7 @@ Allow: /
 Allow: /faq
 Allow: /blizzard
 Allow: /aichat
+Allow: /bomellidaflagphone.jpg
 Allow: /flag.webp
 Allow: /archivepages
 Allow: /sitemap.xml
