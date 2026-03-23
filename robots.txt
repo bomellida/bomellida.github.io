@@ -5,8 +5,6 @@ Disallow: /google117834e32b682861
 Disallow: /bomellidaarchivedocuments
 Disallow: /bomellidaarchivedocuments.pdf
 Disallow: /bomellidaarchivedocuments
-Disallow: /bomellidaflagphone.jpg
-Disallow: /flag.webp
 Allow: /
 Allow: /faq
 Allow: /blizzard
